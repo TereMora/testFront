@@ -1,0 +1,22 @@
+<h1>Usuarios</h1>
+<span class="material-icons" [routerLink] = "['/form']">add_circle</span>
+    <table matSort>
+        <tr>
+            <th mat-sort-header="name">Nombre</th>
+            <th mat-sort-header="apellido">Apellido</th>
+            <th mat-sort-header="username">Username</th>
+            <th mat-sort-header="password">Password</th>
+            <th mat-sort-header="fechaNac">Fecha Nacimiento</th>
+            <th mat-sort-header="accion">Acciones</th>
+
+          </tr>
+        
+        <tr *ngFor="let dat of datos">
+            <td> {{dat.nombre}} </td>
+            <td> {{dat.apellido}} </td>
+            <td> {{dat.username}} </td>
+            <td> {{dat.password}} </td>
+            <td> {{ dat.fechaNac}} </td>
+            <td> <span class="material-icons">create</span> <span class="material-icons">delete_sweep</span></td>
+        </tr>
+    </table>
